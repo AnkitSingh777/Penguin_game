@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+   background-image: url('/../Images/game_back.jpg');
+   background-size: cover;
+}
+.main_div{
+   max-height: 73%;
+   width: 74%;
+   /* background-color: rgb(115, 251, 251); */
+   margin-left: 160px;
+}
+p{
+   text-align: center;
+   color:darkmagenta;
+   font-size: 30px;
+   position: relative;
+   top: 20px;
+}
+.main_div div{
+   float: left;
+   padding: 50px;
+}

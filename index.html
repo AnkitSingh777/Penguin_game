@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link type="text/css" rel="stylesheet" href="css/game_home_page.css">
+   <title>Penguin Game</title>
+</head>
+<body>
+    <div class="main_div">
+        <p>Find the penguin</p>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img1"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img2"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img3"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img4"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img5"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img6"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img7"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img8"></div>
+        <div><img src="Images/mound.png" onmouseover="replace(this)" onmouseout="out(this)" onclick="get_image(this)" id="replace_img9"></div>        
+    </div>
+
+
+<script>
+function replace(rep){
+    //var a= document.getElementById('replace_img1');
+    rep.setAttribute("src","Images/mound_hover.png");
+}
+ function out(mou){
+   // var a= document.getElementById('replace_img1');
+    mou.setAttribute("src","Images/mound.png");
+    }
+
+      var arr=["Images/penguin0.png","Images/penguin1.png",
+               "Images/penguin2.png","Images/penguin3.png",
+               "Images/penguin4.png","Images/penguin5.png",
+               "Images/penguin6.png","Images/penguin7.png",
+                "Images/yeti.png"]
+        var arr2=[];
+    var count1=0;
+        function get_image(curDiv){
+            
+        var random=Math.floor(Math.random()*10);
+           if(arr2.indexOf(random)==-1 &&random<9){
+                arr2.push(random);
+            //     count1++;
+            // if(count1<=9){
+            // var a=document.getElementById("replace_img1");
+            curDiv.setAttribute("src",arr[random]);
+            curDiv.removeAttribute("onclick");
+            curDiv.removeAttribute("onmouseover");
+            curDiv.removeAttribute("onmouseout");
+              if(arr[random]==arr[8]){
+             window.open("game_win_page.html","_self")
+              
+                 }
+             } 
+
+        else{
+                get_image(curDiv);
+            }  
+                          
+        }
+  
+    </script>
+</body>
+</html>
