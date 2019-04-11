@@ -32,7 +32,7 @@ P{
        color: white;
    }
    .video_div{
-      height: 100vh;
+      height: 800px;
       width:100vw;
       z-index: -1000;
       position: fixed;
