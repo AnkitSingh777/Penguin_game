@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body{
-   background-image: url('/../Images/game_back.jpg');
+   background-image: url('../Images/game_back.jpg');
    background-size: cover;
 }
 .main_div{
